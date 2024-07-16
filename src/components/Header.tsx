@@ -32,7 +32,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-          <div className='flex gap-2 ml-auto items-center'>
+          <div className='md:flex hidden gap-2 ml-auto items-center'>
             <a href="" className='text-gray font-semibold hover:text-dark-violet'>Login</a>
             <Button variant='rounded'>Sign up</Button>
           </div>
