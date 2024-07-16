@@ -52,13 +52,13 @@ const UrlShortener = () => {
 
   return (
     <>
-      <section className="p-4 bg-dark-violet bg-url-mobile bg-no-repeat bg-[right_top_-60px] w-full my-6 rounded-lg transform -translate-y-24">
-        <form onSubmit={(e) => handleSubmit(e)} action="">
+      <section className="p-4 bg-dark-violet bg-url-mobile bg-no-repeat bg-[right_top_-60px] w-full my-6 rounded-lg transform -translate-y-24 md:p-8 md:bg-url-desktop md:bg-right-top ">
+        <form onSubmit={(e) => handleSubmit(e)} action="" className="md:grid md:grid-cols-[80%_18%] md:items-start md:gap-4">
           <div className="mb-3">
             <input
               value={urlVal}
               onChange={(e) => setUrlVal(e.target.value)}
-              className="p-2 pl-2 rounded w-full"
+              className={`p-2 pl-2 rounded w-full ${error && 'border-red-500 border-2'}`}
               placeholder="Shorten a link here..."
               type="text"
             />
@@ -69,7 +69,7 @@ const UrlShortener = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  className="text-red-500 text-sm italic my-2"
+                  className="text-red-500 text-sm italic my-2 md:mt-2 mb-0"
                 >
                   {errMsg}
                 </motion.p>
@@ -85,6 +85,7 @@ const UrlShortener = () => {
               "Shorten It!"
             )}
           </Button>
+
           {postErr && (
             <p className="text-red-500 text-sm italic my-2">
               Something is wrong

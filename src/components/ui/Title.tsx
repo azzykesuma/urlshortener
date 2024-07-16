@@ -6,7 +6,7 @@ interface TitleProps {
 }
 
 const Title = ({variants, children} : TitleProps) => {
-    const classVariance = variants === 'h1' ? 'text-4xl' : variants === 'h2' ? 'text-3xl' : 'text-2xl';
+    const classVariance = variants === 'h1' ? 'text-4xl md:text-[50px] leading-[50px]' : variants === 'h2' ? 'text-3xl' : 'text-2xl';
   return (
     <h1 className={`${classVariance} font-bold text-very-dark-blue`}>{children}</h1>
   )

@@ -4,15 +4,15 @@ import Title from "./ui/Title";
 
 const Hero = () => {
   return (
-    <section className="overflow-hidden">
-      <div>
+    <section className="overflow-hidden md:flex md:flex-row-reverse md:justify-between md:items-center">
+      <div className="md:basis-1/2">
         <img
           src={heroIllu}
-          className="transform translate-x-10 "
+          className="transform translate-x-10"
           alt="illustration"
         />
       </div>
-      <div className="mt-4 flex flex-col items-center text-center">
+      <div className="mt-4 flex flex-col items-center text-center md:text-left md:items-start md:basis-1/3">
         <Title variants="h1">More than just shorter links</Title>
         <p className="my-5 text-grayish-violet font-medium">
           Build your brand’s recognition and get detailed insights on how your

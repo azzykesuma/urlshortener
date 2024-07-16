@@ -22,3 +22,12 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+@media screen and (min-width:768px) {
+  .list-2 {
+    margin-top: 50px;
+  }
+  .list-3 {
+    margin-top: 100px;
+  }
+}

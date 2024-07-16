@@ -27,28 +27,29 @@ const Features = () => {
   return (
     <section className="text-center">
       <Title variants="h2">Advanced Statistics</Title>
-      <p className="my-6 text-grayish-violet font-medium">
+      <p className="my-6 text-grayish-violet font-medium md:max-w-[400px] md:mx-auto">
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
-        {features.map((feature, i) => (
-            <div key={i} className="bg-white p-6 mb-12 rounded-lg relative z-10">
-            <div className="bg-dark-violet w-fit p-4 rounded-full absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <img src={feature.icon} alt={feature.title} className="w-10 " />
-            </div>
-            <h3 className="text-dark-violet text-xl font-bold mb-4 mt-10">
-              {feature.title}
-            </h3>
-            <p className="text-grayish-violet font-medium pb-4">
-              {feature.description}
-            </p>
-            {i !== features.length - 1 && (
-                <div className="absolute left-1/2 -bottom-10 transform -translate-x-1/2 w-2 bg-cyan h-10 z-0"></div>
-            )}
-          </div>
-        ))}
+  {features.map((feature, i) => (
+    <div key={i} className={`bg-white p-6 mb-12 rounded-lg relative z-10 list-${i+1}`}>
+      <div className="bg-dark-violet w-fit p-4 rounded-full absolute -top-8 left-1/2 transform -translate-x-1/2">
+        <img src={feature.icon} alt={feature.title} className="w-10 " />
       </div>
+      <h3 className="text-dark-violet text-xl font-bold mb-4 mt-10">
+        {feature.title}
+      </h3>
+      <p className="text-grayish-violet font-medium pb-4">
+        {feature.description}
+      </p>
+      {i !== features.length - 1 && (
+        <div className="absolute left-1/2 -bottom-10 transform -translate-x-1/2 w-2 bg-cyan h-10 z-0 md:hidden"></div>
+      )}
+    </div>
+  ))}
+</div>
+
     </section>
   );
 };

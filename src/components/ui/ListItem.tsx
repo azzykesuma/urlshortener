@@ -27,7 +27,7 @@ const ListItem = ({ item, deleteHistory }: ListItemProps) => {
 
   return (
     <motion.div
-      className="bg-white rounded-lg relative"
+      className="bg-white rounded-lg relative md:flex md:items-center md:justify-between"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
@@ -42,8 +42,8 @@ const ListItem = ({ item, deleteHistory }: ListItemProps) => {
         {item.initialLink}
       </h4>
       <div className="border-b-[1px] border-gray"></div>
-      <div className="p-4">
-        <p ref={copyRef} className="mb-3 text-gray font-medium text-sm">
+      <div className="p-4 md:flex md:items-center md:gap-4 md:mr-5">
+        <p ref={copyRef} className="mb-3 text-gray font-medium text-sm md:mb-0">
           {item.shortLink}
         </p>
         <Button
