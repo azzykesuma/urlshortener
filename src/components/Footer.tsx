@@ -7,18 +7,18 @@ import instagramIcon from '../assets/images/icon-instagram.svg'
 const Footer = () => {
   return (
     <footer className="bg-very-dark-violet">
-      <div className="flex flex-col justify-centern items-center text-center py-6">
+      <div className="flex flex-col justify-centern items-center text-center py-6 md:flex-row md:items-start md:justify-between md:px-36">
         <div className="my-10">
           <Logo />
         </div>
-        <nav className="footer-content">
+        <nav className="md:flex md:text-left md:justify-evenly gap- w-1/2">
           {routes.map((route, index) => (
             <div key={index} className="footer-group">
               <h3 className="text-white my-4 font-semibold">{route.group}</h3>
               <ul>
                 {route.links.map((link, index) => (
                   <li key={index} className="mb-2">
-                    <a href="/" className="text-gray">{link.title}</a>
+                    <a href="/" className="text-gray hover:text-blue-400">{link.title}</a>
                   </li>
                 ))}
               </ul>

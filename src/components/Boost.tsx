@@ -2,9 +2,9 @@ import Button from './ui/Button'
 
 const Boost = () => {
   return (
-   <section className='bg-dark-violet p-4 bg-boost-mobile flex flex-col gap-6 justify-center items-center h-[300px]'>
+   <section className='bg-dark-violet p-4 bg-boost-mobile flex flex-col gap-6 justify-center items-center h-[300px] md:h-[200px]'>
         <h3 className='text-2xl font-semibold text-white'>Boost your links today</h3>
-        <div className='w-1/2'>
+        <div className='w-1/2 md:w-[150px]'>
             <Button variant='rounded'>Get Started</Button>
         </div>
    </section>

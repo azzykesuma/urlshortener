@@ -42,7 +42,7 @@ const ListItem = ({ item, deleteHistory }: ListItemProps) => {
         {item.initialLink}
       </h4>
       <div className="border-b-[1px] border-gray"></div>
-      <div className="p-4 md:flex md:items-center md:gap-4 md:mr-5">
+      <div className="p-4 md:flex md:items-center md:gap-4 md:mr-9">
         <p ref={copyRef} className="mb-3 text-gray font-medium text-sm md:mb-0">
           {item.shortLink}
         </p>

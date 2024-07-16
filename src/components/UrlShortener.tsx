@@ -105,7 +105,7 @@ const UrlShortener = () => {
           <Button
             variant="square"
             onClick={() => setShowAll((prev) => !prev)}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded md:w-1/4 md:mx-auto"
           >
             {showAll ? "Show Less" : "Show More"}
           </Button>
